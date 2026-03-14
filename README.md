@@ -48,8 +48,8 @@ Aselens is a powerful, sleek, and high-performance social media downloader built
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/socialdownloader.git
-   cd socialdownloader
+   git clone https://github.com/aselens-software/social-downloader.git
+   cd social-downloader
    ```
 
 2. **Install dependencies**:

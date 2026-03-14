@@ -77,6 +77,20 @@ docker-compose up -d
 
 ---
 
+## 🚀 Deployment
+
+### Netlify (Frontend Only)
+The project includes a `netlify.toml` file for easy frontend deployment.
+- **Publish Directory**: `public`
+- **API Proxying**: By default, `/api/*` requests are proxied. Update the `netlify.toml` with your actual backend URL.
+
+### Backend Deployment
+Since the backend requires `yt-dlp` and `ffmpeg`, we recommend:
+- **Render / Railway / Heroku**: Use a Docker-based deployment (using the included `Dockerfile`).
+- **VPS**: Standard Node.js setup with binary dependencies installed.
+
+---
+
 ## 🛡 Security & Privacy
 
 Aselens does not store your data. All media downloads are processed on-the-fly or stored temporarily in a private `downloads` folder which is purged regularly. No metadata or user URLs are permanently logged.

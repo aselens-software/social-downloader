@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıkça Sorulan Sorular - Aselens Sosyal Medya İndirici</title>
+    <meta name="description"
+        content="Aselens hakkında aklınıza takılan sorular ve yanıtlarına Sıkça Sorulan Sorular sayfamızdan ulaşın. Yüksek kaliteli medya indirici yardımı.">
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- SEO Structured Data FAQ -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Aselens tamamen ücretsiz mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, Aselens tamamen ücretsizdir ve herhangi bir indirme limiti barındırmaz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hangi platformlar destekleniyor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "YouTube, Instagram, TikTok, Twitter, Reddit, Facebook, Twitch başta olmak üzere 1000'den fazla websitesi desteklenmektedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "İndirdiğim videolar sunucuda saklanıyor mu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayır. Aselens gizlilik odaklıdır. Dosyalarınız indirildikten kısa bir süre sonra sunucudan kalıcı olarak silinir."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="seo-page">
+    <div class="bg-canvas" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo" aria-label="Aselens Ana Sayfa">
+                <span class="logo-text">Aselens</span>
+            </a>
+            <nav class="header-actions">
+                <a href="/" style="color:#fff; text-decoration:none;">Ana Sayfa</a>
+                <a href="/about" style="color:#fff; text-decoration:none; margin-left:15px;">Hakkımızda</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div id="adsense-slot-top" class="ads-container"></div>
+
+        <div class="card content-card"
+            style="max-width: 800px; margin: 0 auto; text-align: left; animation: fadeUp 0.6s ease;">
+            <h1
+                style="margin-bottom: 30px; font-size: 2.5rem; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                Sıkça Sorulan Sorular</h1>
+
+            <div class="faq-item" style="margin-bottom: 25px;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 10px; color: var(--text-primary);">Aselens tamamen
+                    ücretsiz mi?</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">Evet, Aselens servislerini kullanmak tamamen
+                    ücretsizdir. Herhangi bir gizli ücret, abonelik veya indirme limiti barındırmaz.</p>
+            </div>
+
+            <div class="faq-item" style="margin-bottom: 25px;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 10px; color: var(--text-primary);">Hangi platformlar
+                    destekleniyor?</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">YouTube, Instagram, TikTok, Twitter (X),
+                    Reddit, Facebook, Twitch, Vimeo ve SoundCloud başta olmak üzere 1000'den fazla sosyal medya ve video
+                    paylaşım platformu desteklenmektedir.</p>
+            </div>
+
+            <div class="faq-item" style="margin-bottom: 25px;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 10px; color: var(--text-primary);">İndirdiğim videolar
+                    sunucuda saklanıyor mu?</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">Hayır. Aselens, kullanıcı gizliliğine %100
+                    saygı duyar. Tarafınızdan indirilen medya dosyaları veya dönüştürülen MP3'ler çok kısa bir süre
+                    (maksimum 1 saat) içerisinde sunucularımızdan tamamen silinmektedir.</p>
+            </div>
+
+            <div class="faq-item" style="margin-bottom: 25px;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 10px; color: var(--text-primary);">Video Codec ve Bitrate
+                    ayarları ne işe yarar?</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">Gelişmiş kullanıcılar için sunduğumuz bu
+                    menüde, inen videonun H.264 veya H.265 (HEVC) olarak indirilmesini seçebilirsiniz. Ayrıca ses
+                    indirmelerinde kaliteyi belirlemek için bitrate oranını ayarlayabilirsiniz. Bu sayede cihazınıza en
+                    uygun formata sahip olursunuz.</p>
+            </div>
+        </div>
+
+        <div id="adsense-slot-bottom" class="ads-container" style="margin-top: 40px;"></div>
+    </main>
+
+    <!-- Minimal Script to inject config themes -->
+    <script>
+        fetch('/api/config')
+            .then(r => r.json())
+            .then(cfg => {
+                if (cfg.theme) document.documentElement.setAttribute('data-theme', cfg.theme);
+                if (cfg.adsenseScript) {
+                    const adsContainers = document.querySelectorAll('.ads-container');
+                    adsContainers.forEach(container => {
+                        container.innerHTML = cfg.adsenseScript;
+                        const scripts = container.getElementsByTagName('script');
+                        for (let i = 0; i < scripts.length; i++) {
+                            const newScript = document.createElement('script');
+                            if (scripts[i].src) newScript.src = scripts[i].src;
+                            newScript.innerHTML = scripts[i].innerHTML;
+                            document.head.appendChild(newScript);
+                        }
+                    });
+                }
+            });
+    </script>
+</body>
+
+</html>

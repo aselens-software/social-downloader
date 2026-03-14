@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aselens | Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/admin.css">
+</head>
+
+<body>
+
+    <div id="loginOverlay" class="login-overlay active">
+        <div class="login-card">
+            <div class="logo">Aselens <span>Admin</span></div>
+            <form id="loginForm">
+                <input type="password" id="adminPassword" placeholder="Admin Password" required
+                    autocomplete="current-password">
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div id="loginError" class="error-msg"></div>
+        </div>
+    </div>
+
+    <div id="adminApp" class="admin-app" style="display: none;">
+        <aside class="sidebar">
+            <div class="sidebar-logo">Aselens Admin</div>
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active" data-tab="dashboard">Dashboard</a>
+                <a href="#config" class="nav-item" data-tab="config">Configuration</a>
+                <a href="/" class="nav-item" target="_blank">View Site ↗</a>
+            </nav>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <h2>Admin Panel</h2>
+            </header>
+
+            <div class="tab-content active" id="tab-dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Visits (Unique IPs)</h3>
+                        <div class="stat-value" id="statVisits">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Downloads</h3>
+                        <div class="stat-value" id="statDownloads">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-config">
+                <div class="config-card">
+                    <h3>Site Configuration</h3>
+                    <form id="configForm">
+                        <div class="form-group">
+                            <label>Theme</label>
+                            <select id="configTheme">
+                                <option value="dark">Dark (Default)</option>
+                                <option value="light">Light</option>
+                                <option value="neon">Neon (Custom)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Enabled Languages (comma separated codes)</label>
+                            <input type="text" id="configLangs" placeholder="tr,en,es,ru,ar">
+                            <small>Available basic codes: tr, en, es, ru, ar</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Google Adsense Script</label>
+                            <textarea id="configAdsense" rows="4"
+                                placeholder='<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>'></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Make Admin Password Change</label>
+                            <input type="password" id="configPassword" placeholder="Leave blank to keep current">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Save Configuration</button>
+                    </form>
+                    <div id="configMsg" class="msg"></div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="/admin.js"></script>
+</body>
+
+</html>

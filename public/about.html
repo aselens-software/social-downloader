@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - Aselens Sosyal Medya İndirici</title>
+    <meta name="description"
+        content="Aselens, tüm sosyal medya platformlarından video ve ses indirmenizi sağlayan ücretsiz ve reklamsız bir araştırma aracıdır. Hakkımızda detaylı bilgi alın.">
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="seo-page">
+    <!-- Animation background mapping -->
+    <div class="bg-canvas" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo" aria-label="Aselens Ana Sayfa">
+                <span class="logo-text">Aselens</span>
+            </a>
+            <nav class="header-actions">
+                <a href="/" style="color:#fff; text-decoration:none;">Ana Sayfa</a>
+                <a href="/faq" style="color:#fff; text-decoration:none; margin-left:15px;">SSS</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div id="adsense-slot-top" class="ads-container"></div>
+        <div class="card content-card"
+            style="max-width: 800px; margin: 0 auto; text-align: left; animation: fadeUp 0.6s ease;">
+            <h1
+                style="margin-bottom: 20px; font-size: 2.5rem; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                Aselens Hakkında</h1>
+
+            <p style="margin-bottom: 20px; line-height: 1.8; color: var(--text-secondary);">
+                Aselens, 1000'den fazla sosyal medya ve video paylaşım platformundan yüksek kaliteli içerikleri
+                cihazınıza indirmenize olanak tanıyan yeni nesil bir web aracıdır. Vizyonumuz, kullanıcılara
+                internetteki
+                medyayı tamamen özgür, hızlı, reklamsız ve kesintisiz şekilde erişilebilir kılmaktır.
+            </p>
+
+            <h2 style="margin: 30px 0 15px; font-size: 1.5rem;">Neden Aselens?</h2>
+            <ul style="margin-left: 20px; color: var(--text-secondary); line-height: 1.8;">
+                <li><strong>Premium Animasyon Deneyimi:</strong> Modern altyapımız, sadece bir araç kullanmaktan öte
+                    size bir deneyim sunar.</li>
+                <li><strong>Gizlilik Odaklı:</strong> Dosyalarınızı tutmuyoruz. Yapılan her indirme kısa süre sonra
+                    silinir.</li>
+                <li><strong>Gelişmiş Seçenekler:</strong> Bitrate, codec ve altyazı gömme gibi üst düzey indirme
+                    tercihleri sunuyoruz.</li>
+                <li><strong>Tamamen Ücretsiz:</strong> Özgür formatlar ve açık kaynaklı araçların gücüyle, limiti
+                    olmayan bir servistir.</li>
+            </ul>
+
+            <h2 style="margin: 30px 0 15px; font-size: 1.5rem;">Misyonumuz</h2>
+            <p style="line-height: 1.8; color: var(--text-secondary);">
+                Aselens, sadece basit bir indirici değil; internet üzerindeki medya formatları arasındaki bariyerleri
+                kaldıran,
+                kullanıcılarına yüksek kalitede bir vizyon sunan profesyonel bir ekosistemdir. Tasarım, mühendislik ve
+                hızı
+                bir araya getirerek en iyiyi oluşturmayı hedefliyoruz.
+            </p>
+        </div>
+        <div id="adsense-slot-bottom" class="ads-container" style="margin-top: 40px;"></div>
+    </main>
+
+    <!-- Minimal Script to inject config themes -->
+    <script>
+        fetch('/api/config')
+            .then(r => r.json())
+            .then(cfg => {
+                if (cfg.theme) document.documentElement.setAttribute('data-theme', cfg.theme);
+                if (cfg.adsenseScript) {
+                    const adsContainers = document.querySelectorAll('.ads-container');
+                    adsContainers.forEach(container => {
+                        container.innerHTML = cfg.adsenseScript;
+                        // Evaluates script tags dynamically
+                        const scripts = container.getElementsByTagName('script');
+                        for (let i = 0; i < scripts.length; i++) {
+                            const newScript = document.createElement('script');
+                            if (scripts[i].src) newScript.src = scripts[i].src;
+                            newScript.innerHTML = scripts[i].innerHTML;
+                            document.head.appendChild(newScript);
+                        }
+                    });
+                }
+            });
+    </script>
+</body>
+
+</html>

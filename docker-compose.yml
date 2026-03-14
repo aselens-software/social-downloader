@@ -1,0 +1,15 @@
+services:
+  aselens:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aselens
+    ports:
+      - "3169:3169"
+    environment:
+      - PORT=3169
+      - NODE_ENV=production
+    restart: unless-stopped
+    # Optional: mount a volume for yt-dlp cookies (for private content)
+    # volumes:
+    #   - ./cookies.txt:/app/cookies.txt:ro

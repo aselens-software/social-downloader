@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Aselens – Profesyonel Sosyal Medya İndirici</title>
+  <meta name="description"
+    content="Aselens ile YouTube, Instagram, TikTok, Twitter (X), Pinterest, LinkedIn ve daha 1000'den fazla platformdan video ve mp3 indirin. Ücretsiz, reklamsız ve filigransız yüksek kaliteli indirme." />
+  <meta name="keywords"
+    content="video indir, mp3 dönüştürücü, youtube indir, tiktok filigransız indir, instagram reels indir, sosyal medya video indir" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Aselens" />
+  <link rel="canonical" href="https://aselens.com/" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aselens – Medyayı Yüksek Kalitede İndir" />
+  <meta property="og:description"
+    content="Tüm favori platformlarınızdan en yüksek kalitede, reklamsız ve kesintisiz video / ses indirme deneyimi. Hiçbir dosyayı sunucumuzda barındırmıyoruz, tam gizlilik." />
+  <meta property="og:url" content="https://aselens.com/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Animation Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD Schema for Google SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Aselens",
+    "description": "Profesyonel sosyal medya video ve ses indirme platformu. 1000'den fazla siteyi destekler.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Animated background -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Aselens Ana Sayfa">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="13" stroke="url(#grad)" stroke-width="2" />
+            <path d="M10 9.5l9 4.5-9 4.5V9.5z" fill="url(#grad)" />
+            <defs>
+              <linearGradient id="grad" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#8B5CF6" />
+                <stop offset="1" stop-color="#3B82F6" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">Aselens <span style="font-size: 0.6em; opacity: 0.7;font-weight: 500;">- Social
+            Downloader</span></span>
+      </a>
+
+      <nav class="header-actions">
+        <!-- Language Selector -->
+        <div class="custom-select" id="langSelectWrap" style="min-width: 60px; margin-right: 5px;" role="listbox"
+          aria-label="Dil seçimi">
+          <div class="custom-select-trigger" id="langSelectTrigger" tabindex="0" role="button"
+            style="padding: 6px 10px;">
+            <span class="custom-select-trigger-text" id="langSelectText" style="font-weight:600;">TR</span>
+          </div>
+          <div class="custom-select-dropdown" id="langSelectDropdown" role="listbox">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+        <a href="/about" class="icon-btn"
+          style="text-decoration:none; width:auto; padding: 0 10px; font-weight:600; font-size:14px;">Hakkımızda</a>
+        <a href="/faq" class="icon-btn"
+          style="text-decoration:none; width:auto; padding: 0 10px; font-weight:600; font-size:14px;">SSS</a>
+        <button id="settingsBtn" class="icon-btn" aria-label="Ayarlar" title="Ayarlar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+          </svg>
+        </button>
+        <button id="themeBtn" class="icon-btn" aria-label="Tema Değiştir" title="Tema Değiştir">
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div id="adsense-slot-top" class="ads-container"></div>
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-badge" style="opacity:0;">
+        <span class="badge-dot"></span>
+        <span data-i18n="heroBadge">1000+ Platform Destekleniyor</span>
+      </div>
+      <h1 id="hero-title" class="hero-title" style="opacity:0;">
+        <span data-i18n="heroTitle1">Medyayı</span> <span class="gradient-text" data-i18n="heroTitle2">Özgürce</span>
+        <span data-i18n="heroTitle3">İndir</span>
+      </h1>
+      <p class="hero-sub" data-i18n="heroSub" style="opacity:0;">
+        Tüm sosyal medya adreslerinden yüksek kaliteli içerikleri ânında indirin. Kesintisiz, reklamsız, limitsiz.
+      </p>
+
+      <!-- Input Card -->
+      <div class="card" id="mainCard" style="opacity:0;">
+        <!-- Platform badge -->
+        <div class="platform-badge" id="platformBadge" aria-live="polite">
+          <span class="platform-icon" id="platformIcon"></span>
+          <span class="platform-name" id="platformName"></span>
+        </div>
+
+        <form id="downloadForm" class="input-row" autocomplete="off" novalidate>
+          <label for="urlInput" class="sr-only">Video URL</label>
+          <div class="input-wrap">
+            <span class="input-prefix-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+              </svg>
+            </span>
+            <input type="url" id="urlInput" class="url-input" data-i18n-ph="urlPlaceholder"
+              placeholder="Buraya link yapıştır..." spellcheck="false" autocomplete="off" />
+            <button type="button" id="pasteBtn" class="paste-btn" data-i18n-title="pasteBtn" title="Panodan yapıştır">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+              </svg>
+            </button>
+          </div>
+          <button type="submit" id="fetchBtn" class="fetch-btn">
+            <span class="btn-text" data-i18n="fetchBtn">Ara</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <!-- Media Preview -->
+        <div class="media-preview" id="mediaPreview" hidden>
+          <div class="preview-inner">
+            <div class="preview-thumb-wrap">
+              <img id="previewThumb" class="preview-thumb" src="" alt="Thumbnail" referrerpolicy="no-referrer" />
+              <div class="preview-duration" id="previewDuration"></div>
+            </div>
+            <div class="preview-info">
+              <p class="preview-title" id="previewTitle"></p>
+              <p class="preview-meta" id="previewMeta"></p>
+
+              <div class="format-select-wrap">
+                <label class="format-label">Kalite</label>
+                <!-- Custom dropdown (replaces native select for cross-browser beauty) -->
+                <div class="custom-select" id="customFormatSelect" role="listbox" aria-label="Kalite seçimi"
+                  aria-expanded="false">
+                  <div class="custom-select-trigger" id="customSelectTrigger" tabindex="0" role="button"
+                    aria-haspopup="listbox">
+                    <span class="custom-select-trigger-text" id="customSelectText">En İyi Kalite (Otomatik)</span>
+                    <svg class="custom-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </div>
+                  <div class="custom-select-dropdown" id="customSelectDropdown" role="listbox"></div>
+                </div>
+                <!-- Hidden native select keeps the selected value for JS to read -->
+                <select id="formatSelect" style="display:none" aria-hidden="true"></select>
+              </div>
+
+              <button id="downloadBtn" class="download-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                <span id="downloadBtnText">İndir</span>
+              </button>
+
+              <!-- Download progress -->
+              <div class="dl-progress-wrap" id="dlProgressWrap" hidden>
+                <div class="dl-progress-bar">
+                  <div class="dl-progress-fill" id="dlProgressFill"></div>
+                </div>
+                <p class="dl-progress-label" id="dlProgressLabel" data-i18n="downloading">İndiriliyor...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supported platforms strip -->
+      <div class="platforms-strip" aria-label="Desteklenen platformlar">
+        <div class="platforms-scroll">
+          <span class="platform-chip" style="--c:#FF0000">YouTube</span>
+          <span class="platform-chip" style="--c:#E1306C">Instagram</span>
+          <span class="platform-chip" style="--c:#010101">TikTok</span>
+          <span class="platform-chip" style="--c:#1DA1F2">Twitter</span>
+          <span class="platform-chip" style="--c:#E60023">Pinterest</span>
+          <span class="platform-chip" style="--c:#0A66C2">LinkedIn</span>
+          <span class="platform-chip" style="--c:#000000">Threads</span>
+          <span class="platform-chip" style="--c:#1AB7EA">Vimeo</span>
+          <span class="platform-chip" style="--c:#1877F2">Facebook</span>
+          <span class="platform-chip" style="--c:#9146FF">Twitch</span>
+          <span class="platform-chip" style="--c:#FF4500">Reddit</span>
+          <span class="platform-chip" style="--c:#FF5500">SoundCloud</span>
+          <span class="platform-chip" style="--c:#0077FF">VK</span>
+          <span class="platform-chip" style="--c:#6C63FF">+1000 Site</span>
+        </div>
+      </div>
+    </section>
+    <div id="adsense-slot-bottom" class="ads-container" style="margin-top: 40px; margin-bottom: 20px;"></div>
+  </main>
+
+  <!-- SETTINGS PANEL -->
+  <div class="settings-overlay" id="settingsOverlay" aria-hidden="true"></div>
+  <aside class="settings-panel animate__animated" id="settingsPanel" role="dialog" aria-modal="true"
+    aria-label="Ayarlar" aria-hidden="true">
+    <div class="settings-header">
+      <h2 class="settings-title" data-i18n="settingsTitle">Ayarlar</h2>
+      <button id="closeSettingsBtn" class="icon-btn" aria-label="Ayarları kapat">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="settings-body">
+      <div class="settings-group">
+        <h3 class="settings-group-title">Varsayılan Kalite</h3>
+        <div class="settings-radio-group" id="defaultQualityGroup" role="radiogroup" aria-label="Varsayılan kalite">
+          <label class="radio-label">
+            <input type="radio" name="defaultQuality" value="best" checked />
+            <span class="radio-custom"></span>
+            En İyi (Otomatik)
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="defaultQuality" value="1080" />
+            <span class="radio-custom"></span>
+            1080p
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="defaultQuality" value="720" />
+            <span class="radio-custom"></span>
+            720p
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="defaultQuality" value="480" />
+            <span class="radio-custom"></span>
+            480p
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="defaultQuality" value="audio" />
+            <span class="radio-custom"></span>
+            Yalnızca Ses
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <h3 class="settings-group-title">Video Formatı</h3>
+        <div class="settings-radio-group" role="radiogroup" aria-label="Video formatı">
+          <label class="radio-label">
+            <input type="radio" name="outputFormat" value="mp4" checked />
+            <span class="radio-custom"></span>
+            MP4
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="outputFormat" value="webm" />
+            <span class="radio-custom"></span>
+            WebM
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="outputFormat" value="mkv" />
+            <span class="radio-custom"></span>
+            MKV
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <h3 class="settings-group-title">Ses Formatı</h3>
+        <div class="settings-radio-group" role="radiogroup" aria-label="Ses formatı">
+          <label class="radio-label">
+            <input type="radio" name="audioFormat" value="mp3" checked />
+            <span class="radio-custom"></span>
+            MP3
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="audioFormat" value="m4a" />
+            <span class="radio-custom"></span>
+            M4A
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="audioFormat" value="opus" />
+            <span class="radio-custom"></span>
+            Opus
+          </label>
+        </div>
+      </div>
+
+      <!-- Advanced Settings Section -->
+      <div class="settings-group">
+        <h3 class="settings-group-title" data-i18n="advancedSettings">Gelişmiş Ayarlar</h3>
+
+        <div class="settings-row-select">
+          <label class="setting-label" data-i18n="audioBitrate">Ses Bitrate</label>
+          <div class="custom-select" id="bitrateSelectWrap" role="listbox">
+            <div class="custom-select-trigger" id="bitrateSelectTrigger" tabindex="0" role="button">
+              <span class="custom-select-trigger-text" id="bitrateSelectText">256 kbps</span>
+            </div>
+            <div class="custom-select-dropdown" id="bitrateSelectDropdown">
+              <div class="custom-option" data-value="128k">128 kbps</div>
+              <div class="custom-option" data-value="192k">192 kbps</div>
+              <div class="custom-option selected" data-value="256k">256 kbps (Önerilen)</div>
+              <div class="custom-option" data-value="320k">320 kbps (Yüksek)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-row-select" style="margin-top: 15px;">
+          <label class="setting-label" data-i18n="videoCodec">Video Codec</label>
+          <div class="custom-select" id="codecSelectWrap" role="listbox">
+            <div class="custom-select-trigger" id="codecSelectTrigger" tabindex="0" role="button">
+              <span class="custom-select-trigger-text" id="codecSelectText">Otomatik</span>
+            </div>
+            <div class="custom-select-dropdown" id="codecSelectDropdown">
+              <div class="custom-option selected" data-value="auto">Otomatik</div>
+              <div class="custom-option" data-value="h264">H.264 (MP4 - En Uyumlu)</div>
+              <div class="custom-option" data-value="h265">H.265 (HEVC - Yüksek Verim)</div>
+              <div class="custom-option" data-value="av1">AV1 (En Yeni - Küçük Dosya)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="toggle-row" style="margin-top: 15px;">
+          <span data-i18n="freeFormats">Öncelikli Özgür Formatlar (VP9/WebM)</span>
+          <button id="freeFormatsToggle" class="theme-toggle-pill" role="switch" aria-checked="false">
+            <span class="toggle-knob"></span>
+          </button>
+        </div>
+
+        <div class="toggle-row" style="margin-top: 15px;">
+          <span data-i18n="sponsorBlock">SponsorBlock (Reklam Bölümlerini Atla)</span>
+          <button id="sponsorBlockToggle" class="theme-toggle-pill" role="switch" aria-checked="false">
+            <span class="toggle-knob"></span>
+          </button>
+        </div>
+
+        <div class="toggle-row" style="margin-top: 15px;">
+          <span data-i18n="embedSubs">Altyazıları Göm (Destekleniyorsa)</span>
+          <button id="embedSubsToggle" class="theme-toggle-pill" role="switch" aria-checked="false">
+            <span class="toggle-knob"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="settings-group">
+        <h3 class="settings-group-title" data-i18n="appearance">Görünüm</h3>
+        <div class="toggle-row">
+          <span>Karanlık Tema</span>
+          <button id="settingsThemeToggle" class="theme-toggle-pill" role="switch" aria-checked="true"
+            aria-label="Karanlık tema">
+            <span class="toggle-knob"></span>
+          </button>
+        </div>
+        <div class="toggle-row">
+          <span>Animasyonlar</span>
+          <button id="animationsToggle" class="theme-toggle-pill active" role="switch" aria-checked="true"
+            aria-label="Animasyonlar">
+            <span class="toggle-knob"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-footer">
+      <p>Aselens v1.0 · yt-dlp tabanlı</p>
+    </div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
